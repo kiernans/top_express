@@ -5,8 +5,18 @@ const authors = [
 
 ]
 
+const books = [
+    { id: 1, name: "The Great Gatsby" },
+    { id: 2, name: "To Kill a Mockingbird" },
+    { id: 3, name: "Pride and Prejudice" },
+]
+
 async function getAuthorById(authorId) {
     return authors.find(author => author.id === authorId);
 };
 
-module.exports = { getAuthorById };
+async function getBookById(bookId) {
+    return books.find(book => book.id === bookId);
+}
+
+module.exports = { getAuthorById, getBookById };
